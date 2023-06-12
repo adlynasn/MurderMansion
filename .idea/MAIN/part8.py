@@ -29,13 +29,13 @@ def determine_motive_and_person(relationship_graph, character_traits_graph, net_
     # Analyze relationships
     for node in relationship_graph.nodes:
         score = relationship_graph.get_node_weighted_score(node)
-        if score > 0.5:
+        if score > 0.8:
             potential_motives[node] = potential_motives.get(node, []) + ['Revenge']
             
     # Analyze character traits
     for node in character_traits_graph.nodes:
         score = character_traits_graph.get_node_weighted_score(node)
-        if score > 0.5:
+        if score > 0.8:
             potential_motives[node] = potential_motives.get(node, []) + ['Power']
 
     # Analyze net worth and financial factors
@@ -64,26 +64,51 @@ relationship_graph.add_node("Jenna")
 relationship_graph.add_node("Peter")
 relationship_graph.add_node("Penelope")
 relationship_graph.add_node("Will")
-relationship_graph.add_node("Marshall")
+relationship_graph.add_node("Mr Marshall")
 
 character_traits_graph.add_node("Jones")
 character_traits_graph.add_node("Jenna")
 character_traits_graph.add_node("Peter")
 character_traits_graph.add_node("Penelope")
 character_traits_graph.add_node("Will")
+character_traits_graph.add_node("Murderer A")
+
 
 net_worth_graph.add_node("Jones")
 net_worth_graph.add_node("Peter")
 net_worth_graph.add_node("Jenna")
+net_worth_graph.add_node("Penelope")
+net_worth_graph.add_node("Will")
 
-relationship_graph.add_edge("Jones", "Marshall", 0.8)
-relationship_graph.add_edge("Penelope", "Marshall", 0.6)
 
-character_traits_graph.add_edge("Jones", "Jenna", 0.7)
-character_traits_graph.add_edge("Jones", "Will", 0.5)
+#closer the higher the ratio
+relationship_graph.add_edge("Jones", "Mr Marshall", 0.7)
+relationship_graph.add_edge("Jenna", "Mr Marshall", 0.7)
+relationship_graph.add_edge("Penelope", "Mr Marshall", 0.6)
+relationship_graph.add_edge("Peter", "Mr Marshall", 0.6)
+relationship_graph.add_edge("Will", "Mr Marshall", 0.3)
 
-net_worth_graph.add_edge("Jones", "Jenna", 1.4)
-net_worth_graph.add_edge("Jones", "Peter", 0.05)
+# Assign a higher weight to indicate higher resemblance/presence of that trait
+#compare with a known murderer
+character_traits_graph.add_edge("Jones", "Murderer A", 0.9)
+character_traits_graph.add_edge("Jenna", "Murderer A", 0.5)
+character_traits_graph.add_edge("Penelope", "Murderer A", 0.3)
+character_traits_graph.add_edge("Peter", "Murderer A", 0.2)
+character_traits_graph.add_edge("Will", "Murderer A", 0.7)
+
+
+# Compare the networth
+# higher 
+net_worth_graph.add_edge("Jones", "Jenna", 1.43)
+net_worth_graph.add_edge("Jones", "Peter", 20)
+net_worth_graph.add_edge("Jones", "Penelope", 2)
+net_worth_graph.add_edge("Jones", "Will", 100)
+net_worth_graph.add_edge("Jenna", "Peter", 0.035)
+net_worth_graph.add_edge("Jenna", "Penelope", 0.2857)
+net_worth_graph.add_edge("Jenna", "Will", 7)
+net_worth_graph.add_edge("Peter", "Penelope", 10)
+net_worth_graph.add_edge("Peter", "Will", 250)
+net_worth_graph.add_edge("Penelope", "Will", 50)
 
 most_likely_motive_category, person_with_highest_motivation = determine_motive_and_person(relationship_graph, character_traits_graph, net_worth_graph)
 
