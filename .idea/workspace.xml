@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5d00315-37cd-46aa-976a-9c6a24b9a112" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/MAIN/part5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/MAIN/part7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/MAIN/word_list.txt" afterDir="false" />
+    <list default="true" id="d5d00315-37cd-46aa-976a-9c6a24b9a112" name="Changes" comment="added alternative algorithm to part 7 solution">
+      <change beforePath="$PROJECT_DIR$/.idea/MAIN/part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MAIN/part1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MAIN/word_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MAIN/word_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,14 +23,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nurad\IdeaProjects\MurderMansion\.idea\MAIN" />
@@ -48,6 +47,26 @@
       <option name="presentableId" value="Default" />
       <updated>1685547662145</updated>
     </task>
+    <task id="LOCAL-00001" summary="added part5 and part7">
+      <created>1686486773337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686486773337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added alternative algorithm to part 7 solution">
+      <created>1686486983606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686486983606</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added part5 and part7" />
+    <MESSAGE value="added alternative algorithm to part 7 solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="added alternative algorithm to part 7 solution" />
   </component>
 </project>
