@@ -19,7 +19,7 @@ def bfs(root):
     print("")
     while queue:
         node = queue.popleft()
-        print(node.name)  # You can modify this to perform any operation on the node
+        print(node.name)
 
         visited.add(node)
 
